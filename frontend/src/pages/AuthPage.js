@@ -106,7 +106,7 @@ export default function AuthPage() {
           />
         ) : (
           <SignUp
-            afterSignUpUrl="/#/chat"
+            afterSignUpUrl="/"
             routing="hash"
             appearance={{
               variables: {
