@@ -172,7 +172,7 @@ export default function LandingPage() {
       <nav style={styles.nav}>
         <div style={styles.navBrand}>
           <div style={styles.navMark}>🎓</div>
-          <div style={styles.navName}>EduBot</div>
+          <div style={styles.navName}>AI Assistant</div>
         </div>
         <div style={{ display: 'flex', gap: '12px' }}>
           <button style={styles.ctaSecondary} onClick={() => navigate('/auth')}>Sign In</button>
