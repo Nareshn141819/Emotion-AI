@@ -234,7 +234,7 @@ export default function ChatPage() {
   useEffect(() => {
     const name = user?.firstName || 'there';
     addBotMsg(
-      `**Hey ${name}! Welcome to EduBot** 🎓\n\nI'm your emotion-aware AI tutor powered by **Groq** (Llama 3.3 70B). I detect your emotional state and **adapt my teaching style** accordingly.\n\n- 😕 **Confused?** I break it down step-by-step\n- 🤩 **Excited?** I go deep with advanced concepts\n- 😤 **Frustrated?** I stay patient and find a new angle\n- 🧐 **Curious?** I feed you rich, fascinating detail\n\nSpeak 🎤 or type to get started!`,
+      `**Hey ${name}! Welcome to Emotion AI Bot** 🎓\n\nI'm your emotion-aware AI tutor. I detect your emotional state and **adapt my teaching style** \nSpeak 🎤 or type to get started!`,
       'happy', null, true // autoplay welcome
     );
   }, []); // eslint-disable-line
@@ -399,16 +399,16 @@ export default function ChatPage() {
 
       {/* Topbar */}
       <header style={S.topbar}>
-        <div style={S.brand}>
-          <div style={S.brandMark}>🎓</div>
-          <div style={S.brandName}>EduBot</div>
-        </div>
+        <a href="https://nareshn141819.github.io/EmotionAdpative-AI/">
+          <div style={S.brand}>
+            <div style={S.brandMark}>🎓</div>
+            <div style={S.brandName}>AI Assist</div>
+          </div>
+        </a>
         <div style={S.topRight}>
           {/* Emotion pill */}
-          <div style={{ ...S.emoPill, borderColor: `${emoData.color}33` }}>
-            <div style={{ ...S.emoDot, background: emoData.color, boxShadow: `0 0 6px ${emoData.color}` }} />
-            <span style={{ color: '#e8eef8', fontSize: '12px' }}>{emoData.icon} {emoData.label}</span>
-          </div>
+
+        
           {/* Fixed model badge */}
           <div style={S.modelBadge}>⚡ Llama 3.3 70B</div>
           {/* Live indicator */}
@@ -458,7 +458,7 @@ export default function ChatPage() {
 
         {/* Emotion radar */}
         <div style={{ marginTop: 'auto', paddingTop: '14px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-          <div style={S.sideLabel}>Emotion Radar</div>
+          <div style={S.sideLabel}>Emotion </div>
           {Object.entries(EMO).map(([k, v]) => (
             <div key={k} style={{ marginBottom: '6px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', marginBottom: '3px' }}>
