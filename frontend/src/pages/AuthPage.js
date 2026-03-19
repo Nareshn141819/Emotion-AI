@@ -84,7 +84,7 @@ export default function AuthPage() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         {mode === 'signin' ? (
           <SignIn
-            afterSignInUrl="/"
+            afterSignInUrl="/#/chat"
             routing="hash"
             appearance={{
               variables: {
@@ -106,7 +106,7 @@ export default function AuthPage() {
           />
         ) : (
           <SignUp
-            afterSignUpUrl="/"
+            afterSignUpUrl="/#/chat"
             routing="hash"
             appearance={{
               variables: {
