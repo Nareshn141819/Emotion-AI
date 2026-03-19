@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { SignIn, SignUp } from '@clerk/clerk-react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@clerk/clerk-react';
+import { Navigate } from 'react-router-dom';
 
 export default function AuthPage() {
   const [mode, setMode] = useState('signin');
-  const navigate = useNavigate();
+  const { isSignedIn } = useAuth();
+
+  // If already signed in, go to chat
+  if (isSignedIn) {
+    return <Navigate to="/chat" replace />;
+  }
 
   return (
     <div style={{
@@ -23,38 +30,20 @@ export default function AuthPage() {
         `,
       }} />
 
-      {/* Back button */}
-      <button onClick={() => navigate('/')} style={{
-        position: 'fixed', top: '24px', left: '24px',
-        display: 'flex', alignItems: 'center', gap: '8px',
-        padding: '8px 16px', borderRadius: '10px',
-        background: 'rgba(14,18,25,0.8)', border: '1px solid rgba(255,255,255,0.08)',
-        color: '#5a6a88', cursor: 'pointer', fontSize: '13px',
-        fontFamily: "'Outfit', sans-serif",
-        backdropFilter: 'blur(12px)',
-        transition: 'color 0.2s',
-        zIndex: 10,
-      }}
-        onMouseEnter={e => e.currentTarget.style.color = '#e8eef8'}
-        onMouseLeave={e => e.currentTarget.style.color = '#5a6a88'}
-      >
-        ← Back
-      </button>
-
       {/* Logo */}
-      <div style={{ textAlign: 'center', marginBottom: '32px', position: 'relative', zIndex: 1 }}>
+      <div style={{ textAlign: 'center', marginBottom: '28px', position: 'relative', zIndex: 1 }}>
         <div style={{
-          width: '56px', height: '56px', borderRadius: '16px',
+          width: '52px', height: '52px', borderRadius: '16px',
           background: 'linear-gradient(135deg, #38bdf8, #818cf8)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: '28px', margin: '0 auto 14px',
+          fontSize: '26px', margin: '0 auto 12px',
           boxShadow: '0 0 32px rgba(56,189,248,0.4)',
         }}>🎓</div>
         <div style={{
           fontSize: '22px', fontWeight: 800, letterSpacing: '-0.5px',
           background: 'linear-gradient(90deg, #38bdf8, #818cf8)',
           WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-        }}>EomoAdaptBot</div>
+        }}>EduBot</div>
         <div style={{ color: '#5a6a88', fontSize: '13px', marginTop: '4px' }}>
           Emotion-Aware AI Tutor
         </div>
@@ -64,7 +53,7 @@ export default function AuthPage() {
       <div style={{
         display: 'flex', borderRadius: '12px', overflow: 'hidden',
         border: '1px solid rgba(255,255,255,0.08)',
-        marginBottom: '24px', position: 'relative', zIndex: 1,
+        marginBottom: '20px', position: 'relative', zIndex: 1,
         background: 'rgba(14,18,25,0.8)',
       }}>
         {['signin', 'signup'].map(m => (
@@ -84,8 +73,8 @@ export default function AuthPage() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         {mode === 'signin' ? (
           <SignIn
-            afterSignInUrl="/#/chat"
             routing="hash"
+            fallbackRedirectUrl="/#/chat"
             appearance={{
               variables: {
                 colorPrimary: '#38bdf8',
@@ -106,8 +95,8 @@ export default function AuthPage() {
           />
         ) : (
           <SignUp
-            afterSignUpUrl="/"
             routing="hash"
+            fallbackRedirectUrl="/#/chat"
             appearance={{
               variables: {
                 colorPrimary: '#38bdf8',
