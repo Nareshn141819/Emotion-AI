@@ -142,8 +142,6 @@ const styles = {
 const FEATURES = [
   { icon: '🎤', title: 'Voice-First Input', desc: 'Speak naturally in your own words. Real-time speech-to-text transcription powered by Web Speech API.' },
   { icon: '😊', title: 'Emotion Detection', desc: 'Detects 8 emotional states from your language patterns — no wearables, no extra setup required.' },
-  { icon: '🧠', title: 'Groq-Powered AI', desc: 'Llama 3.3 70B generates responses adapted to your emotional state — simpler when confused, deeper when excited.' },
-  { icon: '🔊', title: 'Murf AI Voice', desc: 'Human-like voice responses with emotion-tuned pitch and pace. Feels like a real tutor, not a robot.' },
   { icon: '🔒', title: 'Secure Auth', desc: 'Clerk authentication — sign up with email or Google. Your API keys stay safely on the server.' },
   { icon: '⚡', title: 'Blazing Fast', desc: 'Groq inference is 10–25× faster than GPT-4. Get answers in under 2 seconds.' },
 ];
@@ -224,8 +222,6 @@ export default function LandingPage() {
             { icon: '🎤', label: 'Voice Input' },
             { icon: '📝', label: 'Transcribe' },
             { icon: '😊', label: 'Detect Emotion' },
-            { icon: '🧠', label: 'Groq LLM' },
-            { icon: '🔊', label: 'Murf TTS' },
             { icon: '💬', label: 'Response' },
           ].map((s, i, arr) => (
             <React.Fragment key={s.label}>
@@ -287,7 +283,7 @@ export default function LandingPage() {
       </div>
 
       <footer style={styles.footer}>
-        © 2025 EduBot · Built with Groq + Murf AI + Clerk · Deployed on GitHub Pages + Render
+        © 2025 · EmotionAdaptive-AI
       </footer>
 
       <style>{`
