@@ -79,6 +79,31 @@ export default function LandingPage() {
           AI Tutor that feels what you feel
         </div>
 
+        <div 
+  style={{
+    width:88px;
+    height:88px;
+    border-radius:26px;
+    background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(129,140,248,.12));
+    border:1px solid rgba(56,189,248,.25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    box-shadow:0 0 40px rgba(56,189,248,.1);
+    animation:float 5s ease-in-out infinite;
+  }}
+>
+  🧠
+</div>
+
+<style>
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+</style>
+
         <h1 style={{ fontSize:'clamp(32px,7vw,80px)', fontWeight:800, letterSpacing:'-2px',
           lineHeight:1.05, marginBottom:'20px', maxWidth:'800px' }}>
           <span style={{ background:'linear-gradient(135deg,#e8eef8 0%,#38bdf8 40%,#818cf8 70%,#f472b6 100%)',
@@ -89,7 +114,7 @@ export default function LandingPage() {
 
         <p style={{ fontSize:'clamp(14px,2vw,18px)', color:'#5a6a88', maxWidth:'500px',
           lineHeight:1.75, marginBottom:'40px' }}>
-          Eomotion AI Bot detects your emotion from voice and adapts its teaching style in real time — AI emotion detection may occasionally be imprecise, so feel free to clarify how you're feeling!
+          Eomotion AI detects your emotion from voice and adapts its teaching style in real time — Emotion detection may occasionally be imprecise, so feel free to clarify how you're feeling!
         </p>
 
         <div style={{ display:'flex', gap:'12px', flexWrap:'wrap',
@@ -214,7 +239,7 @@ export default function LandingPage() {
         padding:'clamp(20px,3vw,32px) clamp(16px,4vw,48px)',
         borderTop:'1px solid rgba(255,255,255,0.06)',
         color:'#5a6a88', fontSize:'clamp(11px,1.5vw,13px)', fontFamily:'monospace' }}>
-        © 2025 EomtionAdaptive AI
+        © 2026 EomtionAdaptive AI
       </footer>
     </div>
   );
