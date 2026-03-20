@@ -5,8 +5,8 @@ import { useAuth } from '@clerk/clerk-react';
 const FEATURES = [
   { icon: '🎤', title: 'Voice-First Input', desc: 'Speak naturally — real-time speech-to-text transcription.' },
   { icon: '😊', title: 'Emotion Detection', desc: '8 emotional states detected from your language patterns.' },
-  { icon: '🔒', title: 'Secure Auth', desc: 'Clerk authentication — email or Google sign-in.' },
-  { icon: '⚡', title: 'Blazing Fast', desc: 'Groq inference — answers in under 2 seconds.' },
+  { icon: '🔒', title: 'Secure Auth', desc: 'Safe Authentication with— email or Google sign-in.' },
+  { icon: '⚡', title: 'Blazing Fast', desc: 'LLM Inference — answers in under few seconds.' },
 ];
 
 const EMOTIONS = [
@@ -89,7 +89,7 @@ export default function LandingPage() {
 
         <p style={{ fontSize:'clamp(14px,2vw,18px)', color:'#5a6a88', maxWidth:'500px',
           lineHeight:1.75, marginBottom:'40px' }}>
-          EduBot detects your emotion from voice or text and adapts its teaching style in real time.
+          EomotionAdapt Bot detects your emotion from voice and adapts its teaching style in real time.
         </p>
 
         <div style={{ display:'flex', gap:'12px', flexWrap:'wrap',
@@ -214,7 +214,7 @@ export default function LandingPage() {
         padding:'clamp(20px,3vw,32px) clamp(16px,4vw,48px)',
         borderTop:'1px solid rgba(255,255,255,0.06)',
         color:'#5a6a88', fontSize:'clamp(11px,1.5vw,13px)', fontFamily:'monospace' }}>
-        2025 EomtionAdaptive AI
+        © 2025 EomtionAdaptive AI
       </footer>
     </div>
   );
