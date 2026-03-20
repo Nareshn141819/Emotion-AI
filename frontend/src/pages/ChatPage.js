@@ -329,7 +329,7 @@ export default function ChatPage() {
     }
 
     setBusy(false);
-    setVstatus('Press 🎤 to speak, or type below');
+    setVstatus('');
     setTimeout(() => setPipeState(null), 3000);
   }, [input, busy, history, voice, getToken]); // eslint-disable-line
 
