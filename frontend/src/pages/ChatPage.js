@@ -444,7 +444,7 @@ export default function ChatPage() {
                 {busy ? '⏳' : '➤'}
               </button>
             </div>
-            <p style={color:'#38bdf8', size:'25px'}>Emotional AI can make mistakes. Please double check responses</p>
+            <p style={color:'#38bdf8'}>Emotional AI can make mistakes. Please double check responses</p>
           </div>
 
         </div>
