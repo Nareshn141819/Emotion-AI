@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useAuth, useUser, UserButton } from '@clerk/clerk-react';
 import ReactMarkdown from 'react-markdown';
 
-const API = process.env.REACT_APP_BACKEND_URL || 'https://YOUR-APP.onrender.com';
+const API = process.env.REACT_APP_BACKEND_URL || 'https://emotion-adpative-ai.onrender.com';
 const GROQ_MODEL = 'llama-3.3-70b-versatile';
 const VOICES = [
   { id: 'en-US-natalie', label: '👩 Female (Natalie)' },
@@ -447,6 +447,7 @@ export default function ChatPage() {
               <button style={{ width:'clamp(42px,7vw,48px)', height:'clamp(42px,7vw,46px)', borderRadius:'11px', border:'none', cursor: busy ? 'not-allowed' : 'pointer', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'18px', flexShrink:0, transition:'all 0.2s', background: busy ? 'rgba(56,189,248,0.1)' : 'linear-gradient(135deg,#38bdf8,#818cf8)', color: busy ? '#38bdf8' : '#07090f', boxShadow: busy ? 'none' : '0 0 14px rgba(56,189,248,0.3)' }} onClick={() => sendMsg()} disabled={busy}>
                 {busy ? '⏳' : '➤'}
               </button>
+              <p>Emotional AI can make mistakes. Please double check responses</p>
             </div>
           </div>
 
