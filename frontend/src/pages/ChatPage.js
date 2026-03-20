@@ -444,7 +444,24 @@ export default function ChatPage() {
                 {busy ? '⏳' : '➤'}
               </button>
             </div>
-            <p style={color:'#38bdf8'}>Emotional AI can make mistakes. Please double check responses</p>
+          {/* Disclaimer */}
+        <div style={{
+            fontSize: '11px',
+            color: '#5a6a88',
+            background: 'rgba(251,191,36,0.06)',
+            border: '1px solid rgba(251,191,36,0.15)',
+             borderRadius: '8px',
+              padding: '7px 12px',
+              marginBottom: '8px',
+              fontFamily: 'monospace',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+          }}>
+          <span>⚠️</span>
+          <span>Emotion detection is AI-based and may not always be accurate. Feel free to clarify your mood.</span>
+        </div>
+            <p>Emotional AI can make mistakes. Please double check responses</p>
           </div>
 
         </div>
