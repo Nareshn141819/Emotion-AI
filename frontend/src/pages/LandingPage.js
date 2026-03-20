@@ -80,22 +80,22 @@ export default function LandingPage() {
         </div>
 
         <div 
-  style={{
-    width:88px;
-    height:88px;
-    border-radius:26px;
-    background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(129,140,248,.12));
-    border:1px solid rgba(56,189,248,.25);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:38px;
-    box-shadow:0 0 40px rgba(56,189,248,.1);
-    animation:float 5s ease-in-out infinite;
-  }}
->
-  🧠
-</div>
+         style={{
+            width:'88px';
+            height:'88px';
+            border-radius:'26px';
+            background:'linear-gradient(135deg,rgba(56,189,248,.12),rgba(129,140,248,.12))';
+            border:'1px solid rgba(56,189,248,.25)';
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:'38px';
+            box-shadow:'0 0 40px rgba(56,189,248,.1)';
+            animation:float 5s ease-in-out infinite;
+            }}
+        >
+          🧠
+        </div>
 
 <style>
 @keyframes float {
