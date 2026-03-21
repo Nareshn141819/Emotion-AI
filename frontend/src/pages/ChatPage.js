@@ -275,7 +275,7 @@ export default function ChatPage() {
   useEffect(() => {
     const name = user?.firstName || 'there';
     addBotMsg(
-      `**Hey ${name}! Welcome to Emotion AI Bot** \n\nI'm your emotion-aware AI tutor. I detect your emotional state and **adapt my teaching style** to make you understand good.\nSpeak 🎤 or type to get started!`,
+      `**Hey ${name}! Welcome to Emotion AI Bot** \n\nI'm your emotion-aware AI tutor. I detect your emotional state and **adapt my teaching style** to make you understand good.\nSpeak in 🎤 or type to get started!`,
       'happy', null, true
     );
   }, []); // eslint-disable-line
