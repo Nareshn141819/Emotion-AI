@@ -5,8 +5,8 @@ import ReactMarkdown from 'react-markdown';
 const API = process.env.REACT_APP_BACKEND_URL || 'https://emotion-adpative-ai.onrender.com';
 const GROQ_MODEL = 'llama-3.3-70b-versatile';
 const VOICES = [
-  { id: 'en-US-natalie', label: '👩 Female (Natalie)' },
-  { id: 'en-US-marcus',  label: '👨 Male (Marcus)' },
+  { id: 'en-US-natalie', label: '👩 Female' },
+  { id: 'en-US-marcus',  label: '👨 Male' },
 ];
 
 const EMO = {
