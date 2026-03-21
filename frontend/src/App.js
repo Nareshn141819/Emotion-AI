@@ -26,7 +26,7 @@ function LoadingScreen() {
         fontSize: '22px', boxShadow: '0 0 24px rgba(56,189,248,0.4)'
       }}>🎓</div>
       <div style={{ color: '#5a6a88', fontSize: '13px', fontFamily: 'monospace' }}>
-        Loading EduBot…
+        Loading Eomtion AI…
       </div>
     </div>
   );
