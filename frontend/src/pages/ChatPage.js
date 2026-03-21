@@ -226,7 +226,7 @@ export default function ChatPage() {
       '--t-surface2': '#f1f5f9',
       '--t-surface3': '#e2e8f0',
       '--t-border':   'rgba(0,0,0,0.09)',
-      '--t-text':     '#e8eef8',
+      '--t-text':     '#0f172a',
       '--t-muted':    '#64748b',
       '--t-bubble-bot': '#f1f5f9',
       '--t-bubble-user': 'rgba(56,189,248,0.08)',
