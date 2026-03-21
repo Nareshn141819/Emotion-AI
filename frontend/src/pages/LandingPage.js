@@ -231,7 +231,7 @@ export default function LandingPage() {
         padding:'clamp(20px,3vw,32px) clamp(16px,4vw,48px)',
         borderTop:'1px solid rgba(255,255,255,0.06)',
         color:'#5a6a88', fontSize:'clamp(11px,1.5vw,13px)', fontFamily:'monospace' }}>
-        © 2026 EomtionAdaptive AI
+        © 2026 Emotion AI
       </footer>
 
       <style>{`
