@@ -228,7 +228,7 @@ export default function ChatPage() {
       '--t-border':   'rgba(0,0,0,0.09)',
       '--t-text':     '#0f172a',
       '--t-muted':    '#64748b',
-      '--t-bubble-bot': '#f1f5f9',
+      '--t-bubble-bot': '#141c28',
       '--t-bubble-user': '#dbeafe',
       '--t-sidebar':  'rgba(248,250,252,0.98)',
       '--t-topbar':   'rgba(255,255,255,0.95)',
