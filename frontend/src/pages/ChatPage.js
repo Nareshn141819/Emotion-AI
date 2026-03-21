@@ -520,7 +520,7 @@ export default function ChatPage() {
             <span style={{ width:6, height:6, borderRadius:'50%', background:'#34d399', display:'inline-block', animation:'blink 2s infinite' }} />
             {!isMobile && 'LIVE'}
           </div>
-            <UserButton afterSignOutUrl="/EmotionAdpative-AI/#/auth/">
+            <UserButton afterSignOutUrl="/EmotionAdpative-AI/">
              <UserButton.MenuItems>
                <UserButton.Action
                label="Settings"
