@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/EmotionAdpative-AI/static/js/main.f5623887.js",
+    "main.js": "/EmotionAdpative-AI/static/js/main.b30317e4.js",
     "index.html": "/EmotionAdpative-AI/index.html",
-    "main.f5623887.js.map": "/EmotionAdpative-AI/static/js/main.f5623887.js.map"
+    "main.b30317e4.js.map": "/EmotionAdpative-AI/static/js/main.b30317e4.js.map"
   },
   "entrypoints": [
-    "static/js/main.f5623887.js"
+    "static/js/main.b30317e4.js"
   ]
 }
