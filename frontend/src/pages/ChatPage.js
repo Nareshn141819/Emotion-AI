@@ -232,7 +232,7 @@ export default function ChatPage() {
       '--t-bubble-user': 'rgba(56,189,248,0.08)',
       '--t-sidebar':  'rgba(248,250,252,0.98)',
       '--t-topbar':   'rgba(255,255,255,0.95)',
-      '--t-input':    '#ffffff',
+      '--t-input':    '#0e1219',
     },
     system: {
       '--t-bg':       '',
