@@ -106,7 +106,7 @@ export default function LandingPage() {
 
         <p style={{ fontSize:'clamp(14px,2vw,18px)', color:'#5a6a88', maxWidth:'500px',
           lineHeight:1.75, marginBottom:'40px' }}>
-          Eomotion AI detects your emotion from voice and adapts its teaching style in real time — Emotion detection may occasionally be imprecise, so feel free to clarify how you're feeling!
+          Emotion AI detects your emotion from voice and adapts its teaching style in real time — Emotion detection may occasionally be imprecise, so feel free to clarify how you're feeling!
         </p>
 
         <div style={{ display:'flex', gap:'12px', flexWrap:'wrap',
