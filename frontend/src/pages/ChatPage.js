@@ -228,7 +228,7 @@ export default function ChatPage() {
       '--t-border':   'rgba(0,0,0,0.09)',
       '--t-text':     '#0f172a',
       '--t-muted':    '#64748b',
-      '--t-bubble-bot': '#f1f5f9',
+      '--t-bubble-bot': '#121416',
       '--t-bubble-user': '#dbeaff',
       '--t-sidebar':  'rgba(248,250,252,0.98)',
       '--t-topbar':   'rgba(255,255,255,0.95)',
@@ -666,6 +666,12 @@ export default function ChatPage() {
 }
 .bubble-text { color: var(--t-text) !important; }
 p, li, strong, em, code { color: inherit !important; }
+
+.chat-msg p, .chat-msg li, .chat-msg strong,
+.chat-msg em, .chat-msg span { color: inherit !important; }
+strong { color: #38bdf8 !important; }
+
+
 /* Theme transitions */
 *, *::before, *::after {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
