@@ -520,20 +520,20 @@ export default function ChatPage() {
             <span style={{ width:6, height:6, borderRadius:'50%', background:'#34d399', display:'inline-block', animation:'blink 2s infinite' }} />
             {!isMobile && 'LIVE'}
           </div>
-            <UserButton afterSignOutUrl="/#/">
-  <UserButton.MenuItems>
-    <UserButton.Action
-      label="Settings"
-      labelIcon={<span>⚙️</span>}
-      onClick={() => setSettingsOpen(o => !o)}
-    />
-    <UserButton.Action
-      label="Get Help"
-      labelIcon={<span>🆘</span>}
-      onClick={() => window.open('mailto:support@edubot.ai')}
-    />
-  </UserButton.MenuItems>
-</UserButton>
+            <UserButton afterSignOutUrl="/EmotionAdpative-AI/#/auth/">
+             <UserButton.MenuItems>
+               <UserButton.Action
+               label="Settings"
+               labelIcon={<span>⚙️</span>}
+               onClick={() => setSettingsOpen(o => !o)}
+                />
+             <UserButton.Action
+               label="Get Help"
+               labelIcon={<span>🆘</span>}
+               onClick={() => window.open('mailto:support@edubot.ai')}
+                />
+           </UserButton.MenuItems>
+           </UserButton>
         </div>
       </header>
 
