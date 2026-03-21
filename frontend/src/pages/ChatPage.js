@@ -460,7 +460,7 @@ export default function ChatPage() {
         onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(56,189,248,0.3)'}
         onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'}
       >
-        <span>🆘</span>
+        <span>📧</span>
         <div>
           <div style={{ fontWeight: 600 }}>Get Help</div>
           <div style={{ fontSize: '11px', color: '#5a6a88' }}>Contact support</div>
