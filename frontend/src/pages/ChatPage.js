@@ -224,7 +224,7 @@ export default function ChatPage() {
       '--t-bg':       '#f8fafc',
       '--t-surface':  '#ffffff',
       '--t-surface2': '#f1f5f9',
-      '--t-surface3': '#e2e8f0',
+      '--t-surface3': '#b6c9e3',
       '--t-border':   'rgba(0,0,0,0.09)',
       '--t-text':     '#0f172a',
       '--t-muted':    '#64748b',
