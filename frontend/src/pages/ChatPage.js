@@ -111,7 +111,7 @@ function Message({ msg, isPlaying, onTogglePlay }) {
       </div>
       <div style={{ display:'flex', flexDirection:'column', gap:'4px' }}>
         <div style={{ fontSize:'10px', color:'#5a6a88', display:'flex', alignItems:'center', gap:'7px', fontFamily:'monospace', justifyContent: isBot ? 'flex-start' : 'flex-end', flexWrap:'wrap' }}>
-          {isBot ? 'AI' : 'You'} · {msg.time}
+          {isBot ? 'Emotion AI' : 'You'} · {msg.time}
           <span style={{ padding:'2px 8px', borderRadius:'100px', fontSize:'10px', fontWeight:600, color:emo.color, background:`${emo.color}11`, border:`1px solid ${emo.color}33` }}>
             {emo.icon} {emo.label}
           </span>
