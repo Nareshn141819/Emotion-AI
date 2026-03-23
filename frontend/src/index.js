@@ -10,7 +10,7 @@ root.render(
   <React.StrictMode>
     <ClerkProvider
       publishableKey={PUBLISHABLE_KEY}
-      afterSignOutUrl="/EmotionAdpative-AI/#/auth/"
+      afterSignOutUrl="/Emotion-AI/#/auth/"
     >
       <App />
     </ClerkProvider>
