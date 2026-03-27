@@ -471,7 +471,7 @@ export default function ChatPage() {
       <div style={{ height: '1px', background: 'rgba(255,255,255,0.07)', margin: '12px 0' }} />
 
       {/* Sign Out */}
-      <UserButton afterSignOutUrl="/Emotion-AI/"
+      <button afterSignOutUrl="/Emotion-AI/"
         onClick={() => { setSettingsOpen(false); }}
         style={{
           width: '100%', padding: '11px', borderRadius: '10px',
@@ -487,7 +487,7 @@ export default function ChatPage() {
         onMouseLeave={e => e.currentTarget.style.background = 'rgba(248,113,113,0.08)'}
       >
         🚪 Sign Out
-      </UserButton>
+      </button>
     </div>
   </>
   );
