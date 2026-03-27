@@ -92,8 +92,8 @@ export default function AuthPage() {
       {/* Clerk — constrained width on large screens, full on mobile */}
       <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: 'min(480px, 100%)' }}>
         {mode === 'signin'
-          ? <SignIn routing="hash" fallbackRedirectUrl="/#/chat" appearance={appearance} />
-          : <SignUp routing="hash" fallbackRedirectUrl="/#/chat" appearance={appearance} />
+          ? <SignIn routing="hash" fallbackRedirectUrl="/chat" appearance={appearance} />
+          : <SignUp routing="hash" fallbackRedirectUrl="/chat" appearance={appearance} />
         }
       </div>
     </div>
