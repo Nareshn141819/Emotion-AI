@@ -185,7 +185,7 @@ function SidebarContent({ voice, setVoice, emotion, sendMsg, onClose }) {
 export default function ChatPage() {
  const token = await auth.currentUser.getIdToken();
 
-  const { user }     = useUser();
+  const { user } = props;
 
   const [messages,   setMessages]   = useState([]);
   const [history,    setHistory]    = useState([]);
