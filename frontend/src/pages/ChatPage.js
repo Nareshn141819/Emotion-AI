@@ -333,9 +333,9 @@ async function saveToFirestore(msg) {
 
   function addUserMsg(text, emo) {
     setMessages(prev => [...prev, { id: Date.now()+Math.random(), role:'user', text, emotion:emo, time: new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) }]);
+  setMessages(prev => [...prev, msg]);
+  saveToFirestore(msg); // ← add this line 
   }
-   setMessages(prev => [...prev, msg]);
-  saveToFirestore(msg); // ← add this line
 
   function pset(u) { setPipeState(prev => ({ ...(prev||{}), ...u })); }
   
