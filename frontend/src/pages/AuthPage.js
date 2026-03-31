@@ -37,7 +37,7 @@ export default function AuthPage() {
         await signInWithEmailAndPassword(auth, email, pass);
       }
       navigate('/chat');
-    } } catch(ex) {
+     } catch(ex) {
   const code = ex.code || '';
   if (code === 'auth/email-already-in-use') err('This email is already registered. Try Sign In instead.');
   else if (code === 'auth/weak-password') err('Password must be at least 6 characters.');
@@ -88,9 +88,9 @@ export default function AuthPage() {
 
       {/* Mode tabs */}
       <div style={{ display:'flex', borderRadius:'12px', overflow:'hidden', border:'1px solid rgba(255,255,255,0.08)', marginBottom:'20px', background:'rgba(14,18,25,0.8)', zIndex:1 }}>
-        {['signin','signup','phone'].map(m => (
+        {['signin','signup'].map(m => (
           <button key={m} onClick={() => { setMode(m); setStep('form'); setError(''); }} style={{ padding:'9px clamp(14px,3vw,22px)', fontSize:'13px', fontWeight:600, fontFamily:"'Outfit',sans-serif", cursor:'pointer', border:'none', background: mode===m ? 'linear-gradient(135deg,#38bdf8,#818cf8)' : 'transparent', color: mode===m ? '#07090f' : '#5a6a88', transition:'all 0.2s' }}>
-            {m==='signin' ? 'Sign In' : m==='signup' ? 'Sign Up'}
+            {m==='signin' ? 'Sign In' : 'Sign Up'}
           </button>
         ))}
       </div>
