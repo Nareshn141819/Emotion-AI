@@ -575,7 +575,7 @@ async function saveToFirestore(msg) {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             transition: 'all 0.2s', flexShrink: 0,
           }} title="Settings">
-                ⚙️
+                ⚙️ 
           </button>
         </div>
       </header>
