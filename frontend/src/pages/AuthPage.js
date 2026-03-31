@@ -37,8 +37,15 @@ export default function AuthPage() {
         await signInWithEmailAndPassword(auth, email, pass);
       }
       navigate('/chat');
-    } catch(ex) { err(ex.message.replace('Firebase: ','').replace(/\(.*\)/,'')); }
-  }
+    } } catch(ex) {
+  const code = ex.code || '';
+  if (code === 'auth/email-already-in-use') err('This email is already registered. Try Sign In instead.');
+  else if (code === 'auth/weak-password') err('Password must be at least 6 characters.');
+  else if (code === 'auth/invalid-email') err('Please enter a valid email address.');
+  else if (code === 'auth/network-request-failed') err('Network error. Check your connection.');
+  else err(ex.message || 'Something went wrong. Try again.');
+}
+
 
   // ── Google ────────────────────────────────────────────────────
   async function handleGoogle() {
