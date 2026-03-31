@@ -50,24 +50,6 @@ export default function AuthPage() {
   }
 
   // ── Phone OTP ─────────────────────────────────────────────────
-  async function handleSendOTP(e) {
-    e.preventDefault(); setError(''); setLoading(true);
-    try {
-      if (!recapRef.current) {
-        recapRef.current = new RecaptchaVerifier(auth, 'recaptcha-container', { size: 'invisible' });
-      }
-      confirmRef.current = await signInWithPhoneNumber(auth, phone, recapRef.current);
-      setStep('otp'); setLoading(false);
-    } catch(ex) { err(ex.message.replace('Firebase: ','')); }
-  }
-
-  async function handleVerifyOTP(e) {
-    e.preventDefault(); setError(''); setLoading(true);
-    try {
-      await confirmRef.current.confirm(otp);
-      navigate('/chat');
-    } catch(ex) { err('Invalid OTP. Try again.'); }
-  }
 
   const inp = {
     width: '100%', padding: '11px 14px', borderRadius: '10px',
@@ -101,7 +83,7 @@ export default function AuthPage() {
       <div style={{ display:'flex', borderRadius:'12px', overflow:'hidden', border:'1px solid rgba(255,255,255,0.08)', marginBottom:'20px', background:'rgba(14,18,25,0.8)', zIndex:1 }}>
         {['signin','signup','phone'].map(m => (
           <button key={m} onClick={() => { setMode(m); setStep('form'); setError(''); }} style={{ padding:'9px clamp(14px,3vw,22px)', fontSize:'13px', fontWeight:600, fontFamily:"'Outfit',sans-serif", cursor:'pointer', border:'none', background: mode===m ? 'linear-gradient(135deg,#38bdf8,#818cf8)' : 'transparent', color: mode===m ? '#07090f' : '#5a6a88', transition:'all 0.2s' }}>
-            {m==='signin' ? 'Sign In' : m==='signup' ? 'Sign Up' : '📱 Phone'}
+            {m==='signin' ? 'Sign In' : m==='signup' ? 'Sign Up'}
           </button>
         ))}
       </div>
@@ -130,30 +112,9 @@ export default function AuthPage() {
         )}
 
         {/* Phone OTP */}
-        {mode === 'phone' && step === 'form' && (
-          <form onSubmit={handleSendOTP}>
-            <input style={inp} type="tel" placeholder="+91XXXXXXXXXX (with country code)" value={phone} onChange={e=>setPhone(e.target.value)} required />
-            <div id="recaptcha-container" />
-            <button type="submit" style={btn()}>
-              {loading ? '⏳ Sending OTP…' : 'Send OTP'}
-            </button>
-          </form>
-        )}
+       
 
-        {mode === 'phone' && step === 'otp' && (
-          <form onSubmit={handleVerifyOTP}>
-            <div style={{ textAlign:'center', color:'#5a6a88', fontSize:'13px', marginBottom:'14px' }}>
-              OTP sent to {phone}
-            </div>
-            <input style={{ ...inp, textAlign:'center', fontSize:'20px', letterSpacing:'8px' }} type="text" placeholder="------" maxLength={6} value={otp} onChange={e=>setOtp(e.target.value)} required />
-            <button type="submit" style={btn()}>
-              {loading ? '⏳ Verifying…' : 'Verify OTP'}
-            </button>
-            <button type="button" onClick={() => { setStep('form'); setOtp(''); }} style={btn('rgba(255,255,255,0.05)','#e8eef8')}>
-              ← Change number
-            </button>
-          </form>
-        )}
+        
 
         {/* Divider */}
         {mode !== 'phone' && (
