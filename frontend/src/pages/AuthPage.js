@@ -6,6 +6,7 @@ import {
   signInWithPopup,
   updateProfile,
 } from 'firebase/auth';
+
 import { auth, googleProvider } from '../firebase';
  
 export default function AuthPage() {
