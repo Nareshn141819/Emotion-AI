@@ -73,7 +73,7 @@ export default function App() {
     <HashRouter>
       <RouteTransition>
         <Routes>
-          <Route path="/"     element={<LandingPage user={user} />} />
+          <Route path="/" element={user ? <Navigate to="/chat" replace /> : <LandingPage user={user} />} />
           <Route path="/auth" element={user ? <Navigate to="/chat" replace /> : <AuthPage />} />
           <Route path="/chat" element={
             <ProtectedRoute user={user}>
