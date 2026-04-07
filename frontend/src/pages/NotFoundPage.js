@@ -31,12 +31,10 @@ export default function NotFoundPage() {
     WebkitTextFillColor: 'transparent',
     display: 'flex',
     gap: '10px',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    animation: 'fadeUp 0.6s ease forwards', animationDelay: '0.3s'
   }}
->
-  <span style={{ animation: 'fadeUp 0.6s ease forwards', animationDelay: '0.3s' }}>4</span>
-  <span style={{ animation: 'fadeUp 0.6s ease forwards', animationDelay: '0.7s', opacity: 0 }}>0</span>
-  <span style={{ animation: 'fadeUp 0.6s ease forwards', animationDelay: '1.1s', opacity: 0 }}>4</span>
+>404</span>
 </h1>
 
       <p style={{ fontSize: '18px', color: '#5a6a88',
