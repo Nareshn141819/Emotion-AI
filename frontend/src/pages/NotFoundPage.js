@@ -20,24 +20,7 @@ export default function NotFoundPage() {
         WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
         404
       </h1>
-      <h1
-  style={{
-    fontSize: 'clamp(60px,12vw,120px)',
-    fontWeight: 800,
-    letterSpacing: '-4px',
-    margin: '0 0 8px',
-    background: 'linear-gradient(135deg,#38bdf8,#818cf8)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    display: 'flex',
-    gap: '10px',
-    justifyContent: 'center',
-    animation: 'fadeUp 0.6s ease forwards', animationDelay: '0.3s'
-  }}
->404
-</h1>
-
-      <p style={{ fontSize: '18px', color: '#5a6a88',
+      <p style={{ fontSize: '18px', color: '#885a69',
         marginBottom: '8px', fontWeight: 600 }}>
         Page not found
       </p>
