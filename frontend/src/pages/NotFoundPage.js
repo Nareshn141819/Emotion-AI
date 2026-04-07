@@ -25,7 +25,7 @@ export default function NotFoundPage() {
         Page not found
       </p>
 
-      <p style={{ fontSize: '14px', color: '#5a6a88',
+      <p style={{ fontSize: '18px', color: '#5a6a88',
         maxWidth: '360px', lineHeight: 1.7, marginBottom: '32px' }}>
         Looks like this page doesn't exist. Don't worry — let's get you back on track!
       </p>
