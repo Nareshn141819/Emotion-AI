@@ -14,9 +14,6 @@ export default function NotFoundPage() {
       <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none',
         background: `radial-gradient(ellipse 60% 40% at 50% 50%, rgba(56,189,248,0.06) 0,transparent 60%)` }} />
 
-      <div style={{ fontSize: '80px', marginBottom: '16px',
-        animation: 'float 3s ease-in-out infinite' }}>🧠</div>
-
       <h1 style={{ fontSize: 'clamp(60px,12vw,120px)', fontWeight: 800,
         letterSpacing: '-4px', margin: '0 0 8px',
         background: 'linear-gradient(135deg,#38bdf8,#818cf8)',
@@ -37,7 +34,7 @@ export default function NotFoundPage() {
     justifyContent: 'center'
   }}
 >
-  <span style={{ animation: 'fadeUp 0.6s ease forwards', animationDelay: '0.3s', opacity: 0 }}>4</span>
+  <span style={{ animation: 'fadeUp 0.6s ease forwards', animationDelay: '0.3s' }}>4</span>
   <span style={{ animation: 'fadeUp 0.6s ease forwards', animationDelay: '0.7s', opacity: 0 }}>0</span>
   <span style={{ animation: 'fadeUp 0.6s ease forwards', animationDelay: '1.1s', opacity: 0 }}>4</span>
 </h1>
