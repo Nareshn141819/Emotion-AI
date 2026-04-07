@@ -5,6 +5,7 @@ import { auth } from './firebase';
 import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
 import ChatPage from './pages/ChatPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function PageSpinner() {
   return (
@@ -80,7 +81,7 @@ export default function App() {
               <ChatPage user={user} />
             </ProtectedRoute>
           } />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </RouteTransition>
     </HashRouter>
