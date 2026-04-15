@@ -168,7 +168,8 @@ export default function AuthPage() {
  
         {/* Google */}
         <button onClick={handleGoogle} style={btn('rgba(255,255,255,0.05)', '#e8eef8')}>
-          <span style={{ marginRight: '8px' }}>🌐</span> Continue with Google
+          <img src="https://www.google.com/favicon.ico" alt="G" style={{ width: 18, height: 18 }} />
+          Continue with Google
         </button>
  
       </div>
